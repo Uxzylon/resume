@@ -7,6 +7,7 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usepackage{fontawesome}
 
 % Header information
 \newcommand{\name}{Anthony Jeanney}
@@ -23,7 +24,7 @@
 \definecolor{itemcolor}{RGB}{0, 51, 102}
 
 % Set margins
-\geometry{left=0.7cm, right=0.7cm, top=0.5cm, bottom=0.5cm}
+\geometry{left=0.7cm, right=2cm, top=0.5cm, bottom=0.5cm}
 
 \begin{document}
 
@@ -47,26 +48,40 @@
     \end{tabular}
 \end{center}
 
-% Sections
-% Two sections : left and right (left about 65% of the page)
+{\color{sectioncolor}\rule{\linewidth}{0.5mm}}
+\vspace{0.1cm}
 
 % Left section
 \begin{minipage}[t]{0.65\textwidth}
 
-    % Education
-    \section*{\textcolor{sectioncolor}{Éducation}}
-    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
-        \textbf{2018 - 2021} & \textbf{DUT Informatique} \\
-        & IUT de Belfort-Montbéliard \\
-        & \textit{Belfort, France} \\
+    % Skills
+    \section*{\textcolor{sectioncolor}{Compétences}}
+    \begin{tabular}{ m{0.18\textwidth} m{0.73\textwidth} }
+        \textbf{Langages} & Java, C, C++, C\#, Python, PHP, JavaScript, SQL \\
         & \\
-        \textbf{2018} & \textbf{Baccalauréat Scientifique} \\
-        & Lycée Condorcet \\
-        & \textit{Belfort, France} \\
+        \textbf{Frameworks} & Spring, Angular, Bootstrap, jQuery, Node.js, Express.js \\
+        & \\
+        \textbf{Outils} & Git, Maven, Docker, IntelliJ, Visual Studio Code, Visual Studio, Eclipse, MySQL Workbench, phpMyAdmin \\
     \end{tabular}
 
-    % Experience
-    \section*{\textcolor{sectioncolor}{Expérience}}
+    % Formations
+    \section*{\textcolor{sectioncolor}{Formations}}
+    \begin{tabular}{ m{0.187\textwidth} m{0.8\textwidth} }
+        \textbf{2022 - 2024} & \textbf{Master Web et Sciences des Données} \\
+        & Université du Littoral Côte d'Opale \\
+        & \textit{Calais, France} \\
+        & \\
+        \textbf{2018 - 2022} & \textbf{Licence Informatique} \\
+        & Université du Littoral Côte d'Opale \\
+        & \textit{Calais, France} \\
+        & \\
+        \textbf{2018} & \textbf{Baccalauréat Scientifique} \\
+        & Lycée de l'Europe \\
+        & \textit{Dunkerque, France} \\
+    \end{tabular}
+
+    % Experiences
+    \section*{\textcolor{sectioncolor}{Expériences}}
     \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
         \textbf{2020} & \textbf{Stage de fin d'études} \\
         & \textit{Développeur Web} \\
@@ -77,37 +92,28 @@
         & \textit{Belfort, France} \\
     \end{tabular}
 
-    % Skills
-    \section*{\textcolor{sectioncolor}{Compétences}}
-    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
-        \textbf{Langages} & C, C++, Java, Python, HTML, CSS, JavaScript, PHP, SQL \\
-        & \\
-        \textbf{Outils} & Git, GitHub, Visual Studio Code, Eclipse, IntelliJ IDEA, MySQL, phpMyAdmin, Apache, Linux, Windows
-    \end{tabular}
-
 \end{minipage}
 % Right section
 \begin{minipage}[t]{0.35\textwidth}
 
     % Contact
     \section*{\textcolor{sectioncolor}{Contact}}
-    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
-        \textbf{Adresse} & 1 rue de la République \\
-        & 90000 Belfort \\
+    \begin{tabular}{ m{0.07\textwidth} m{0.9\textwidth} }
+        \textbf{\faPhone} & (+33) 7 82 21 56 72 \\
+        & \\
+        \textbf{\faEnvelope} & anthony-jeanney@gmail.com \\
+        & \\
+        \textbf{\faGlobe} & https://anthony-jeanney.fr \\
+        & \\
+        \textbf{\faMapMarker} & Dunkerque / Calais \\
         & France \\
         & \\
-        \textbf{Téléphone} & +33 6 00 00 00 00 \\
-        & \\
-        \textbf{Email} & \
-        \begin{tabular}{ m{0.8\textwidth} }
-            \textcolor{itemcolor}{\textbf{Personnel}} \\
-            \textcolor{itemcolor}{\textbf{Universitaire}}
-        \end{tabular}
+        \textbf{\faBirthdayCake} & 17/06/2000 \\
     \end{tabular}
 
     % Languages
     \section*{\textcolor{sectioncolor}{Langues}}
-    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
+    \begin{tabular}{ m{0.3\textwidth} m{0.9\textwidth} } 
         \textbf{Français} & Langue maternelle \\
         & \\
         \textbf{Anglais} & Niveau B2 \\
@@ -117,12 +123,22 @@
 
     % Hobbies
     \section*{\textcolor{sectioncolor}{Loisirs}}
-    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
+    \begin{tabular}{ m{0.25\textwidth} m{0.8\textwidth} }
         \textbf{Sport} & Natation, VTT \\
         & \\
         \textbf{Musique} & Guitare, Piano \\
         & \\
         \textbf{Autres} & Jeux vidéo, Cinéma, Séries
+    \end{tabular}
+
+    % Personnnality
+    \section*{\textcolor{sectioncolor}{Personnalité}}
+    \begin{tabular}{ m{0.3\textwidth} m{0.7\textwidth} }
+        \textbf{Curieux} & J'aime apprendre de nouvelles choses \\
+        & \\
+        \textbf{Autonome} & Je sais travailler seul \\
+        & \\
+        \textbf{Sociable} & J'aime travailler en équipe
     \end{tabular}
 
 \end{minipage}
