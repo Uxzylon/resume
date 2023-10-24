@@ -11,12 +11,9 @@ jobs:
         with:
           root_file: resume.tex
       - name: Create PDF Release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: svenstaro/upload-release-action@v2
         with:
-          tag_name: latest
-          release_name: Latest PDF
-          draft: false
-          prerelease: false
-          files: resume.pdf
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: resume.pdf
+          tag: latest
+          overwrite: true
