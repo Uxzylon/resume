@@ -1,0 +1,130 @@
+\documentclass[a4paper, 12pt]{article}
+
+% Packages for formatting
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% Header information
+\newcommand{\name}{Anthony Jeanney}
+\newcommand{\status}{Étudiant en Informatique}
+\newcommand{\smalltext}{Je suis actuellement étudiant en deuxième année de Master Informatique à L'Université du Littoral Côte d'Opale. Je suis à la recherche d'un stage de fin d'études d'une durée de 10 semaines à partir du 1er avril 2021.}
+\newcommand{\profilepic}{profile.jpg}
+
+% Change font
+\renewcommand{\familydefault}{\sfdefault}
+
+% Define colors
+\definecolor{headercolor}{RGB}{128, 128, 128}
+\definecolor{sectioncolor}{RGB}{0, 102, 204}
+\definecolor{itemcolor}{RGB}{0, 51, 102}
+
+% Set margins
+\geometry{left=0.7cm, right=0.7cm, top=0.5cm, bottom=0.5cm}
+
+\begin{document}
+
+% Header
+\begin{center}
+    \begin{tabular}{ m{0.25\textwidth} m{1\textwidth} m{0.25\textwidth} }
+        \begin{tikzpicture}
+            \clip (0,0) circle (2cm);
+            \node at (0,0) {\includegraphics[width = 4cm]{\profilepic}};
+        \end{tikzpicture}
+        \hspace{0.2cm}{\color{sectioncolor}\rule[0cm]{2pt}{3cm}}\hspace{0.2cm}
+        &
+        \begin{tabular}{@{}p{0.7\textwidth}@{}}
+            {\Huge \textbf{\MakeUppercase{\name}}} \\
+            \vspace{0.1cm}
+            {\large \textcolor{headercolor}{\status}} \\
+            \vspace{0.cm}
+            \textcolor{itemcolor}{\smalltext}
+        \end{tabular}
+        &
+    \end{tabular}
+\end{center}
+
+% Sections
+% Two sections : left and right (left about 65% of the page)
+
+% Left section
+\begin{minipage}[t]{0.65\textwidth}
+
+    % Education
+    \section*{\textcolor{sectioncolor}{Éducation}}
+    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
+        \textbf{2018 - 2021} & \textbf{DUT Informatique} \\
+        & IUT de Belfort-Montbéliard \\
+        & \textit{Belfort, France} \\
+        & \\
+        \textbf{2018} & \textbf{Baccalauréat Scientifique} \\
+        & Lycée Condorcet \\
+        & \textit{Belfort, France} \\
+    \end{tabular}
+
+    % Experience
+    \section*{\textcolor{sectioncolor}{Expérience}}
+    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
+        \textbf{2020} & \textbf{Stage de fin d'études} \\
+        & \textit{Développeur Web} \\
+        & \textit{Belfort, France} \\
+        & \\
+        \textbf{2019} & \textbf{Stage de fin de première année} \\
+        & \textit{Développeur Web} \\
+        & \textit{Belfort, France} \\
+    \end{tabular}
+
+    % Skills
+    \section*{\textcolor{sectioncolor}{Compétences}}
+    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
+        \textbf{Langages} & C, C++, Java, Python, HTML, CSS, JavaScript, PHP, SQL \\
+        & \\
+        \textbf{Outils} & Git, GitHub, Visual Studio Code, Eclipse, IntelliJ IDEA, MySQL, phpMyAdmin, Apache, Linux, Windows
+    \end{tabular}
+
+\end{minipage}
+% Right section
+\begin{minipage}[t]{0.35\textwidth}
+
+    % Contact
+    \section*{\textcolor{sectioncolor}{Contact}}
+    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
+        \textbf{Adresse} & 1 rue de la République \\
+        & 90000 Belfort \\
+        & France \\
+        & \\
+        \textbf{Téléphone} & +33 6 00 00 00 00 \\
+        & \\
+        \textbf{Email} & \
+        \begin{tabular}{ m{0.8\textwidth} }
+            \textcolor{itemcolor}{\textbf{Personnel}} \\
+            \textcolor{itemcolor}{\textbf{Universitaire}}
+        \end{tabular}
+    \end{tabular}
+
+    % Languages
+    \section*{\textcolor{sectioncolor}{Langues}}
+    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
+        \textbf{Français} & Langue maternelle \\
+        & \\
+        \textbf{Anglais} & Niveau B2 \\
+        & \\
+        \textbf{Allemand} & Niveau A2
+    \end{tabular}
+
+    % Hobbies
+    \section*{\textcolor{sectioncolor}{Loisirs}}
+    \begin{tabular}{ m{0.15\textwidth} m{0.8\textwidth} }
+        \textbf{Sport} & Natation, VTT \\
+        & \\
+        \textbf{Musique} & Guitare, Piano \\
+        & \\
+        \textbf{Autres} & Jeux vidéo, Cinéma, Séries
+    \end{tabular}
+
+\end{minipage}
+
+\end{document}
