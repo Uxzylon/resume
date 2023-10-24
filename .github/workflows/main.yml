@@ -11,11 +11,12 @@ jobs:
         with:
           root_file: resume.tex
       - name: Create PDF Release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          tag_name: latest
+          release_name: Latest PDF
+          draft: false
           prerelease: false
-          automatic_release_tag: latest
-          title: "Latest PDF"
-          files: |
-            resume.pdf
+          files: resume.pdf
