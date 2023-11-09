@@ -13,10 +13,19 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
-      - name: Create PDF Release
-        uses: svenstaro/upload-release-action@v2
+      # - name: Create PDF Release
+      #   uses: svenstaro/upload-release-action@v2
+      #   with:
+      #     repo_token: ${{ secrets.GITHUB_TOKEN }}
+      #     file: resume.pdf
+      #     tag: latest
+      #     overwrite: true
+      - name: Configure SSH
+        uses: appleboy/scp-action@master
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: resume.pdf
-          tag: latest
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
           overwrite: true
+          source: "resume.pdf"
+          target: "~/personnal-web-page/public"
