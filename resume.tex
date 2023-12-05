@@ -29,6 +29,9 @@
 % Disable hyphenation
 \hyphenpenalty=10000
 
+% Set line spacing
+\linespread{0.7}
+
 \begin{document}
 
 % Header
@@ -44,7 +47,7 @@
             {\Huge \textbf{\MakeUppercase{\name}}} \\
             \vspace{0.1cm}
             {\large \textcolor{headercolor}{\status}} \\
-            \vspace{0.cm}
+            \vspace{0.05cm}
             \textcolor{itemcolor}{\smalltext}
         \end{tabular}
         &
@@ -69,6 +72,8 @@
         \textbf{Autres} & Linux, Réseaux, Bases de données, IA, Matériel Informatique, Administration Système, etc. \\
     \end{tabular}
 
+    \vspace{-0.4cm}
+
     % Formations
     \section*{\textcolor{sectioncolor}{Formations}}
     \begin{tabular}{ m{0.187\textwidth} m{0.8\textwidth} }
@@ -84,6 +89,26 @@
         & Lycée de l'Europe \\
         & \textit{Dunkerque, France} \\
     \end{tabular}
+
+    \vspace{-0.4cm}
+
+    % Projects
+    \section*{\textcolor{sectioncolor}{Projets}}
+    \begin{tabular}{ m{0.18\textwidth} m{0.73\textwidth} }
+        \textbf{2023} & \textbf{Application de Suivi de Carburant} \\
+        & \textit{Projet de Web Services, creation d'une API} \\
+        & \\
+        & \textbf{IA de jeu Minecraft} \\
+        & \textit{Projet annuel de Master, en Python} \\
+        & \\
+        & \textbf{Application de Suivi de Santé} \\
+        & \textit{Projet de programmation agile, avec un intervenant de Decathlon} \\
+        & \\
+        \textbf{2022} & \textbf{IA de jeu de Cache-Cache} \\
+        & \textit{Projet de fin d'études de Licence, en C++} \\
+    \end{tabular}
+
+    \vspace{-0.4cm}
 
     % Experiences
     \section*{\textcolor{sectioncolor}{Expériences}}
@@ -108,7 +133,7 @@
 \end{minipage}
 % Right section
 \begin{minipage}[t]{0.35\textwidth}
-
+    
     % Information
     \section*{\textcolor{sectioncolor}{Informations}}
     \begin{tabular}{ m{0.07\textwidth} m{0.9\textwidth} }
@@ -141,7 +166,15 @@
 
     % Hobbies
     \section*{\textcolor{sectioncolor}{Loisirs}}
-    Programmation, Domotique, IoT, Électronique, Réseaux, Assemblage de Matériel Informatique, Jeux Vidéos
+    \begin{itemize}[leftmargin=0.5cm, label={\textcolor{itemcolor}{\faAngleRight}}]
+        \item Programmation
+        \item Domotique
+        \item IoT
+        \item Électronique
+        \item Réseaux
+        \item Assemblage de Matériel\\ Informatique
+        \item Jeux Vidéos
+    \end{itemize}
 
     % Personnnality
     \section*{\textcolor{sectioncolor}{Personnalité}}
